@@ -121,6 +121,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if not self.safe_origin(): return self.send(403,{'error':'Only same-origin local requests are accepted.'})
             parsed=urlparse(self.path);path=parsed.path;q=parse_qs(parsed.query)
+            if method=='GET' and path in ('/api','/api/','/api/index.py','/api/index'):
+                return self.send(200,{'ok':True,'name':'Tableflow API','status':'running'})
             if method=='GET' and path=='/api/health':
                 return self.send(200,dict(ok=True,ocr=bool(os.getenv('TESSERACT_CMD') or shutil.which('tesseract')),ai=bool(os.getenv('OPENAI_API_KEY'))))
             user=ACCOUNTS.user_for(self.headers.get('Cookie'))

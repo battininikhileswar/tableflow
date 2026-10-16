@@ -1,0 +1,1439 @@
+{
+  "filename": "sample-50-pages.pdf",
+  "page_count": 50,
+  "tables": [
+    {
+      "id": "table-1",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "headers": [
+        "SKU",
+        "Item",
+        "Category",
+        "Qty",
+        "Unit",
+        "Price",
+        "Tax",
+        "Discount",
+        "Total",
+        "Warehouse",
+        "Status",
+        "Date"
+      ],
+      "rows": [
+        [
+          "SKU001",
+          "Item 01",
+          "Office",
+          "5",
+          "Box",
+          "11.00",
+          "5%",
+          "0.00",
+          "55.00",
+          "HYD",
+          "Ready",
+          "2026-10-01"
+        ],
+        [
+          "SKU002",
+          "Item 02",
+          "Office",
+          "6",
+          "Box",
+          "12.00",
+          "5%",
+          "0.00",
+          "72.00",
+          "HYD",
+          "Ready",
+          "2026-10-02"
+        ],
+        [
+          "SKU003",
+          "Item 03",
+          "Office",
+          "7",
+          "Box",
+          "13.00",
+          "5%",
+          "0.00",
+          "91.00",
+          "HYD",
+          "Ready",
+          "2026-10-03"
+        ],
+        [
+          "SKU004",
+          "Item 04",
+          "Office",
+          "8",
+          "Box",
+          "14.00",
+          "5%",
+          "0.00",
+          "112.00",
+          "HYD",
+          "Ready",
+          "2026-10-04"
+        ],
+        [
+          "SKU005",
+          "Item 05",
+          "Office",
+          "9",
+          "Box",
+          "15.00",
+          "5%",
+          "0.00",
+          "135.00",
+          "HYD",
+          "Ready",
+          "2026-10-05"
+        ],
+        [
+          "SKU006",
+          "Item 06",
+          "Office",
+          "10",
+          "Box",
+          "16.00",
+          "5%",
+          "0.00",
+          "160.00",
+          "HYD",
+          "Ready",
+          "2026-10-06"
+        ],
+        [
+          "SKU007",
+          "Item 07",
+          "Office",
+          "11",
+          "Box",
+          "17.00",
+          "5%",
+          "0.00",
+          "187.00",
+          "HYD",
+          "Ready",
+          "2026-10-07"
+        ],
+        [
+          "SKU008",
+          "Item 08",
+          "Office",
+          "12",
+          "Box",
+          "18.00",
+          "5%",
+          "0.00",
+          "216.00",
+          "HYD",
+          "Ready",
+          "2026-10-08"
+        ],
+        [
+          "SKU009",
+          "Item 09",
+          "Office",
+          "13",
+          "Box",
+          "19.00",
+          "5%",
+          "0.00",
+          "247.00",
+          "HYD",
+          "Ready",
+          "2026-10-09"
+        ],
+        [
+          "SKU010",
+          "Item 10",
+          "Office",
+          "14",
+          "Box",
+          "20.00",
+          "5%",
+          "0.00",
+          "280.00",
+          "HYD",
+          "Ready",
+          "2026-10-10"
+        ],
+        [
+          "SKU011",
+          "Item 11",
+          "Office",
+          "15",
+          "Box",
+          "21.00",
+          "5%",
+          "0.00",
+          "315.00",
+          "HYD",
+          "Ready",
+          "2026-10-11"
+        ],
+        [
+          "SKU012",
+          "Item 12",
+          "Office",
+          "16",
+          "Box",
+          "22.00",
+          "5%",
+          "0.00",
+          "352.00",
+          "HYD",
+          "Ready",
+          "2026-10-12"
+        ],
+        [
+          "SKU013",
+          "Item 13",
+          "Office",
+          "17",
+          "Box",
+          "23.00",
+          "5%",
+          "0.00",
+          "391.00",
+          "HYD",
+          "Ready",
+          "2026-10-13"
+        ],
+        [
+          "SKU014",
+          "Item 14",
+          "Office",
+          "18",
+          "Box",
+          "24.00",
+          "5%",
+          "0.00",
+          "432.00",
+          "HYD",
+          "Ready",
+          "2026-10-14"
+        ],
+        [
+          "SKU015",
+          "Item 15",
+          "Office",
+          "19",
+          "Box",
+          "25.00",
+          "5%",
+          "0.00",
+          "475.00",
+          "HYD",
+          "Ready",
+          "2026-10-15"
+        ],
+        [
+          "SKU016",
+          "Item 16",
+          "Office",
+          "20",
+          "Box",
+          "26.00",
+          "5%",
+          "0.00",
+          "520.00",
+          "HYD",
+          "Ready",
+          "2026-10-16"
+        ],
+        [
+          "SKU001",
+          "Item 01",
+          "Office",
+          "5",
+          "Box",
+          "11.00",
+          "5%",
+          "0.00",
+          "55.00",
+          "HYD",
+          "Ready",
+          "2026-10-01"
+        ],
+        [
+          "SKU002",
+          "Item 02",
+          "Office",
+          "6",
+          "Box",
+          "12.00",
+          "5%",
+          "0.00",
+          "72.00",
+          "HYD",
+          "Ready",
+          "2026-10-02"
+        ],
+        [
+          "SKU003",
+          "Item 03",
+          "Office",
+          "7",
+          "Box",
+          "13.00",
+          "5%",
+          "0.00",
+          "91.00",
+          "HYD",
+          "Ready",
+          "2026-10-03"
+        ],
+        [
+          "SKU004",
+          "Item 04",
+          "Office",
+          "8",
+          "Box",
+          "14.00",
+          "5%",
+          "0.00",
+          "112.00",
+          "HYD",
+          "Ready",
+          "2026-10-04"
+        ],
+        [
+          "SKU005",
+          "Item 05",
+          "Office",
+          "9",
+          "Box",
+          "15.00",
+          "5%",
+          "0.00",
+          "135.00",
+          "HYD",
+          "Ready",
+          "2026-10-05"
+        ],
+        [
+          "SKU006",
+          "Item 06",
+          "Office",
+          "10",
+          "Box",
+          "16.00",
+          "5%",
+          "0.00",
+          "160.00",
+          "HYD",
+          "Ready",
+          "2026-10-06"
+        ],
+        [
+          "SKU007",
+          "Item 07",
+          "Office",
+          "11",
+          "Box",
+          "17.00",
+          "5%",
+          "0.00",
+          "187.00",
+          "HYD",
+          "Ready",
+          "2026-10-07"
+        ],
+        [
+          "SKU008",
+          "Item 08",
+          "Office",
+          "12",
+          "Box",
+          "18.00",
+          "5%",
+          "0.00",
+          "216.00",
+          "HYD",
+          "Ready",
+          "2026-10-08"
+        ],
+        [
+          "SKU009",
+          "Item 09",
+          "Office",
+          "13",
+          "Box",
+          "19.00",
+          "5%",
+          "0.00",
+          "247.00",
+          "HYD",
+          "Ready",
+          "2026-10-09"
+        ],
+        [
+          "SKU010",
+          "Item 10",
+          "Office",
+          "14",
+          "Box",
+          "20.00",
+          "5%",
+          "0.00",
+          "280.00",
+          "HYD",
+          "Ready",
+          "2026-10-10"
+        ],
+        [
+          "SKU011",
+          "Item 11",
+          "Office",
+          "15",
+          "Box",
+          "21.00",
+          "5%",
+          "0.00",
+          "315.00",
+          "HYD",
+          "Ready",
+          "2026-10-11"
+        ],
+        [
+          "SKU012",
+          "Item 12",
+          "Office",
+          "16",
+          "Box",
+          "22.00",
+          "5%",
+          "0.00",
+          "352.00",
+          "HYD",
+          "Ready",
+          "2026-10-12"
+        ],
+        [
+          "SKU013",
+          "Item 13",
+          "Office",
+          "17",
+          "Box",
+          "23.00",
+          "5%",
+          "0.00",
+          "391.00",
+          "HYD",
+          "Ready",
+          "2026-10-13"
+        ],
+        [
+          "SKU014",
+          "Item 14",
+          "Office",
+          "18",
+          "Box",
+          "24.00",
+          "5%",
+          "0.00",
+          "432.00",
+          "HYD",
+          "Ready",
+          "2026-10-14"
+        ],
+        [
+          "SKU015",
+          "Item 15",
+          "Office",
+          "19",
+          "Box",
+          "25.00",
+          "5%",
+          "0.00",
+          "475.00",
+          "HYD",
+          "Ready",
+          "2026-10-15"
+        ],
+        [
+          "SKU016",
+          "Item 16",
+          "Office",
+          "20",
+          "Box",
+          "26.00",
+          "5%",
+          "0.00",
+          "520.00",
+          "HYD",
+          "Ready",
+          "2026-10-16"
+        ],
+        [
+          "SKU001",
+          "Item 01",
+          "Office",
+          "5",
+          "Box",
+          "11.00",
+          "5%",
+          "0.00",
+          "55.00",
+          "HYD",
+          "Ready",
+          "2026-10-01"
+        ],
+        [
+          "SKU002",
+          "Item 02",
+          "Office",
+          "6",
+          "Box",
+          "12.00",
+          "5%",
+          "0.00",
+          "72.00",
+          "HYD",
+          "Ready",
+          "2026-10-02"
+        ],
+        [
+          "SKU003",
+          "Item 03",
+          "Office",
+          "7",
+          "Box",
+          "13.00",
+          "5%",
+          "0.00",
+          "91.00",
+          "HYD",
+          "Ready",
+          "2026-10-03"
+        ],
+        [
+          "SKU004",
+          "Item 04",
+          "Office",
+          "8",
+          "Box",
+          "14.00",
+          "5%",
+          "0.00",
+          "112.00",
+          "HYD",
+          "Ready",
+          "2026-10-04"
+        ],
+        [
+          "SKU005",
+          "Item 05",
+          "Office",
+          "9",
+          "Box",
+          "15.00",
+          "5%",
+          "0.00",
+          "135.00",
+          "HYD",
+          "Ready",
+          "2026-10-05"
+        ],
+        [
+          "SKU006",
+          "Item 06",
+          "Office",
+          "10",
+          "Box",
+          "16.00",
+          "5%",
+          "0.00",
+          "160.00",
+          "HYD",
+          "Ready",
+          "2026-10-06"
+        ],
+        [
+          "SKU007",
+          "Item 07",
+          "Office",
+          "11",
+          "Box",
+          "17.00",
+          "5%",
+          "0.00",
+          "187.00",
+          "HYD",
+          "Ready",
+          "2026-10-07"
+        ],
+        [
+          "SKU008",
+          "Item 08",
+          "Office",
+          "12",
+          "Box",
+          "18.00",
+          "5%",
+          "0.00",
+          "216.00",
+          "HYD",
+          "Ready",
+          "2026-10-08"
+        ],
+        [
+          "SKU009",
+          "Item 09",
+          "Office",
+          "13",
+          "Box",
+          "19.00",
+          "5%",
+          "0.00",
+          "247.00",
+          "HYD",
+          "Ready",
+          "2026-10-09"
+        ],
+        [
+          "SKU010",
+          "Item 10",
+          "Office",
+          "14",
+          "Box",
+          "20.00",
+          "5%",
+          "0.00",
+          "280.00",
+          "HYD",
+          "Ready",
+          "2026-10-10"
+        ],
+        [
+          "SKU011",
+          "Item 11",
+          "Office",
+          "15",
+          "Box",
+          "21.00",
+          "5%",
+          "0.00",
+          "315.00",
+          "HYD",
+          "Ready",
+          "2026-10-11"
+        ],
+        [
+          "SKU012",
+          "Item 12",
+          "Office",
+          "16",
+          "Box",
+          "22.00",
+          "5%",
+          "0.00",
+          "352.00",
+          "HYD",
+          "Ready",
+          "2026-10-12"
+        ],
+        [
+          "SKU013",
+          "Item 13",
+          "Office",
+          "17",
+          "Box",
+          "23.00",
+          "5%",
+          "0.00",
+          "391.00",
+          "HYD",
+          "Ready",
+          "2026-10-13"
+        ],
+        [
+          "SKU014",
+          "Item 14",
+          "Office",
+          "18",
+          "Box",
+          "24.00",
+          "5%",
+          "0.00",
+          "432.00",
+          "HYD",
+          "Ready",
+          "2026-10-14"
+        ],
+        [
+          "SKU015",
+          "Item 15",
+          "Office",
+          "19",
+          "Box",
+          "25.00",
+          "5%",
+          "0.00",
+          "475.00",
+          "HYD",
+          "Ready",
+          "2026-10-15"
+        ],
+        [
+          "SKU016",
+          "Item 16",
+          "Office",
+          "20",
+          "Box",
+          "26.00",
+          "5%",
+          "0.00",
+          "520.00",
+          "HYD",
+          "Ready",
+          "2026-10-16"
+        ],
+        [
+          "SKU001",
+          "Item 01",
+          "Office",
+          "5",
+          "Box",
+          "11.00",
+          "5%",
+          "0.00",
+          "55.00",
+          "HYD",
+          "Ready",
+          "2026-10-01"
+        ],
+        [
+          "SKU002",
+          "Item 02",
+          "Office",
+          "6",
+          "Box",
+          "12.00",
+          "5%",
+          "0.00",
+          "72.00",
+          "HYD",
+          "Ready",
+          "2026-10-02"
+        ]
+      ],
+      "method": "pdf-native",
+      "confidence": [],
+      "header_assumption": "First detected row; editable in review",
+      "source_header": [
+        "SKU",
+        "Item",
+        "Category",
+        "Qty",
+        "Unit",
+        "Price",
+        "Tax",
+        "Discount",
+        "Total",
+        "Warehouse",
+        "Status",
+        "Date"
+      ],
+      "row_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 1 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU001\nItem 01\nOffice\n5\nBox\n11.00\n5%\n0.00\n55.00\nHYD\nReady\n2026-10-01\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 2,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 2 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU002\nItem 02\nOffice\n6\nBox\n12.00\n5%\n0.00\n72.00\nHYD\nReady\n2026-10-02\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 3,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 3 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU003\nItem 03\nOffice\n7\nBox\n13.00\n5%\n0.00\n91.00\nHYD\nReady\n2026-10-03\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 4,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 4 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU004\nItem 04\nOffice\n8\nBox\n14.00\n5%\n0.00\n112.00\nHYD\nReady\n2026-10-04\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 5,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 5 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU005\nItem 05\nOffice\n9\nBox\n15.00\n5%\n0.00\n135.00\nHYD\nReady\n2026-10-05\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 6,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 6 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU006\nItem 06\nOffice\n10\nBox\n16.00\n5%\n0.00\n160.00\nHYD\nReady\n2026-10-06\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 7,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 7 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU007\nItem 07\nOffice\n11\nBox\n17.00\n5%\n0.00\n187.00\nHYD\nReady\n2026-10-07\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 8,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 8 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU008\nItem 08\nOffice\n12\nBox\n18.00\n5%\n0.00\n216.00\nHYD\nReady\n2026-10-08\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 9,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 9 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU009\nItem 09\nOffice\n13\nBox\n19.00\n5%\n0.00\n247.00\nHYD\nReady\n2026-10-09\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 10,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 10 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU010\nItem 10\nOffice\n14\nBox\n20.00\n5%\n0.00\n280.00\nHYD\nReady\n2026-10-10\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 11,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 11 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU011\nItem 11\nOffice\n15\nBox\n21.00\n5%\n0.00\n315.00\nHYD\nReady\n2026-10-11\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 12,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 12 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU012\nItem 12\nOffice\n16\nBox\n22.00\n5%\n0.00\n352.00\nHYD\nReady\n2026-10-12\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 13,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 13 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU013\nItem 13\nOffice\n17\nBox\n23.00\n5%\n0.00\n391.00\nHYD\nReady\n2026-10-13\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 14,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 14 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU014\nItem 14\nOffice\n18\nBox\n24.00\n5%\n0.00\n432.00\nHYD\nReady\n2026-10-14\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 15,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 15 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU015\nItem 15\nOffice\n19\nBox\n25.00\n5%\n0.00\n475.00\nHYD\nReady\n2026-10-15\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 16,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 16 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU016\nItem 16\nOffice\n20\nBox\n26.00\n5%\n0.00\n520.00\nHYD\nReady\n2026-10-16\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 17,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 17 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU001\nItem 01\nOffice\n5\nBox\n11.00\n5%\n0.00\n55.00\nHYD\nReady\n2026-10-01\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 18,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 18 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU002\nItem 02\nOffice\n6\nBox\n12.00\n5%\n0.00\n72.00\nHYD\nReady\n2026-10-02\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 19,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 19 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU003\nItem 03\nOffice\n7\nBox\n13.00\n5%\n0.00\n91.00\nHYD\nReady\n2026-10-03\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 20,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 20 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU004\nItem 04\nOffice\n8\nBox\n14.00\n5%\n0.00\n112.00\nHYD\nReady\n2026-10-04\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 21,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 21 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU005\nItem 05\nOffice\n9\nBox\n15.00\n5%\n0.00\n135.00\nHYD\nReady\n2026-10-05\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 22,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 22 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU006\nItem 06\nOffice\n10\nBox\n16.00\n5%\n0.00\n160.00\nHYD\nReady\n2026-10-06\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 23,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 23 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU007\nItem 07\nOffice\n11\nBox\n17.00\n5%\n0.00\n187.00\nHYD\nReady\n2026-10-07\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 24,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 24 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU008\nItem 08\nOffice\n12\nBox\n18.00\n5%\n0.00\n216.00\nHYD\nReady\n2026-10-08\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 25,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 25 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU009\nItem 09\nOffice\n13\nBox\n19.00\n5%\n0.00\n247.00\nHYD\nReady\n2026-10-09\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 26,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 26 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU010\nItem 10\nOffice\n14\nBox\n20.00\n5%\n0.00\n280.00\nHYD\nReady\n2026-10-10\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 27,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 27 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU011\nItem 11\nOffice\n15\nBox\n21.00\n5%\n0.00\n315.00\nHYD\nReady\n2026-10-11\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 28,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 28 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU012\nItem 12\nOffice\n16\nBox\n22.00\n5%\n0.00\n352.00\nHYD\nReady\n2026-10-12\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 29,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 29 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU013\nItem 13\nOffice\n17\nBox\n23.00\n5%\n0.00\n391.00\nHYD\nReady\n2026-10-13\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 30,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 30 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU014\nItem 14\nOffice\n18\nBox\n24.00\n5%\n0.00\n432.00\nHYD\nReady\n2026-10-14\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 31,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 31 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU015\nItem 15\nOffice\n19\nBox\n25.00\n5%\n0.00\n475.00\nHYD\nReady\n2026-10-15\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 32,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 32 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU016\nItem 16\nOffice\n20\nBox\n26.00\n5%\n0.00\n520.00\nHYD\nReady\n2026-10-16\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 33,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 33 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU001\nItem 01\nOffice\n5\nBox\n11.00\n5%\n0.00\n55.00\nHYD\nReady\n2026-10-01\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 34,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 34 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU002\nItem 02\nOffice\n6\nBox\n12.00\n5%\n0.00\n72.00\nHYD\nReady\n2026-10-02\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 35,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 35 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU003\nItem 03\nOffice\n7\nBox\n13.00\n5%\n0.00\n91.00\nHYD\nReady\n2026-10-03\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 36,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 36 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU004\nItem 04\nOffice\n8\nBox\n14.00\n5%\n0.00\n112.00\nHYD\nReady\n2026-10-04\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 37,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 37 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU005\nItem 05\nOffice\n9\nBox\n15.00\n5%\n0.00\n135.00\nHYD\nReady\n2026-10-05\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 38,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 38 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU006\nItem 06\nOffice\n10\nBox\n16.00\n5%\n0.00\n160.00\nHYD\nReady\n2026-10-06\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 39,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 39 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU007\nItem 07\nOffice\n11\nBox\n17.00\n5%\n0.00\n187.00\nHYD\nReady\n2026-10-07\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 40,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 40 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU008\nItem 08\nOffice\n12\nBox\n18.00\n5%\n0.00\n216.00\nHYD\nReady\n2026-10-08\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 41,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 41 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU009\nItem 09\nOffice\n13\nBox\n19.00\n5%\n0.00\n247.00\nHYD\nReady\n2026-10-09\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 42,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 42 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU010\nItem 10\nOffice\n14\nBox\n20.00\n5%\n0.00\n280.00\nHYD\nReady\n2026-10-10\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 43,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 43 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU011\nItem 11\nOffice\n15\nBox\n21.00\n5%\n0.00\n315.00\nHYD\nReady\n2026-10-11\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 44,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 44 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU012\nItem 12\nOffice\n16\nBox\n22.00\n5%\n0.00\n352.00\nHYD\nReady\n2026-10-12\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 45,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 45 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU013\nItem 13\nOffice\n17\nBox\n23.00\n5%\n0.00\n391.00\nHYD\nReady\n2026-10-13\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 46,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 46 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU014\nItem 14\nOffice\n18\nBox\n24.00\n5%\n0.00\n432.00\nHYD\nReady\n2026-10-14\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 47,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 47 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU015\nItem 15\nOffice\n19\nBox\n25.00\n5%\n0.00\n475.00\nHYD\nReady\n2026-10-15\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 48,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 48 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU016\nItem 16\nOffice\n20\nBox\n26.00\n5%\n0.00\n520.00\nHYD\nReady\n2026-10-16\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 49,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 49 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU001\nItem 01\nOffice\n5\nBox\n11.00\n5%\n0.00\n55.00\nHYD\nReady\n2026-10-01\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    },
+    {
+      "page": 50,
+      "tables": 1,
+      "method": "pdf-native",
+      "text": "TABLEFLOW / INVENTORY\nSynthetic extraction benchmark / 12 columns / Page 50 of 50\nSKU\nItem\nCategory\nQty\nUnit\nPrice\nTax\nDiscount\nTotal\nWarehouse\nStatus\nDate\nSKU002\nItem 02\nOffice\n6\nBox\n12.00\n5%\n0.00\n72.00\nHYD\nReady\n2026-10-02\nOriginal synthetic data. Not a real company record. First row is a header.\n",
+      "error": null
+    }
+  ],
+  "notes": [],
+  "issues": [
+    {
+      "table": "table-1",
+      "row": 16,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 17,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 18,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 19,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 20,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 21,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 22,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 23,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 24,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 25,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 26,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 27,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 28,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 29,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 30,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 31,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 32,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 33,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 34,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 35,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 36,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 37,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 38,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 39,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 40,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 41,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 42,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 43,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 44,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 45,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 46,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 47,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 48,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    },
+    {
+      "table": "table-1",
+      "row": 49,
+      "col": null,
+      "kind": "duplicate",
+      "message": "Repeated row; compare with source."
+    }
+  ]
+}

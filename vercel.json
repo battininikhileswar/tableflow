@@ -6,8 +6,12 @@
   },
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.py"
+      "source": "/api/(.*)",
+      "destination": "/api/index.py?__path=/api/$1"
+    },
+    {
+      "source": "/share/(.*)",
+      "destination": "/api/index.py?__path=/share/$1"
     }
   ]
 }

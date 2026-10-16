@@ -49,20 +49,24 @@ class WSGIHandler(Handler):
         if 'HTTP_ORIGIN' in environ:
             self.headers['Origin'] = environ['HTTP_ORIGIN']
             
-        raw_path = (
-            environ.get('HTTP_X_MATCHED_PATH') or
-            environ.get('HTTP_X_VERCEL_MATCHED_PATH') or
-            environ.get('HTTP_X_NOW_ROUTE') or
-            environ.get('RAW_URI') or
-            environ.get('REQUEST_URI') or
-            environ.get('PATH_INFO', '/')
-        )
-        if raw_path.startswith('/api/index.py') and environ.get('HTTP_X_MATCHED_PATH'):
-            raw_path = environ.get('HTTP_X_MATCHED_PATH')
+        qs = environ.get('QUERY_STRING', '')
+        req_path = None
+        if '__path=' in qs:
+            from urllib.parse import parse_qs
+            p_qs = parse_qs(qs)
+            if '__path' in p_qs:
+                req_path = p_qs['__path'][0]
+                clean_parts = [p for p in qs.split('&') if not p.startswith('__path=')]
+                qs = '&'.join(clean_parts)
+                
+        if not req_path:
+            raw_path = environ.get('PATH_INFO', '/')
+            if raw_path.startswith('/api/index.py') or raw_path in ('/api', '/api/'):
+                raw_path = environ.get('REQUEST_URI') or environ.get('RAW_URI') or raw_path
+            req_path = raw_path
             
-        parsed = urlparse(raw_path)
+        parsed = urlparse(req_path)
         self.path = parsed.path or '/'
-        qs = environ.get('QUERY_STRING') or parsed.query
         if qs:
             self.path += '?' + qs
             
