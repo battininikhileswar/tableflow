@@ -102,17 +102,39 @@ class Handler(BaseHTTPRequestHandler):
         if not isinstance(data,dict):raise ValueError('Request must be a JSON object.')
         return data
     def safe_origin(self):
-        host=self.headers.get('Host','')
-        allowed_hosts=('localhost','127.0.0.1','[::1]')
-        is_allowed=(
-            host.split(':')[0] in allowed_hosts or
-            host.endswith('.vercel.app') or
+        host = (self.headers.get('Host') or '').strip()
+        f_host = (self.headers.get('X-Forwarded-Host') or '').split(',')[0].strip()
+        effective_host = f_host or host
+        host_name = effective_host.split(':')[0].lower()
+        
+        allowed_hosts = ('localhost', '127.0.0.1', '[::1]', '0.0.0.0')
+        is_cloud = (
             bool(os.getenv('VERCEL')) or
-            bool(os.getenv('TABLEFLOW_ALLOW_ANY_HOST'))
+            bool(os.getenv('RENDER')) or
+            bool(os.getenv('RAILWAY_ENVIRONMENT')) or
+            bool(os.getenv('FLY_APP_NAME')) or
+            bool(os.getenv('TABLEFLOW_ALLOW_ANY_HOST')) or
+            os.getenv('TABLEFLOW_HOST') == '0.0.0.0' or
+            Path('/.dockerenv').is_file() or
+            any(host_name.endswith(suffix) for suffix in ('.vercel.app', '.onrender.com', '.railway.app', '.fly.dev', '.koyeb.app', '.hf.space'))
         )
-        if not is_allowed: return False
-        origin=self.headers.get('Origin')
-        return not origin or origin in ('http://'+host,'https://'+host)
+        if not (host_name in allowed_hosts or is_cloud):
+            return False
+            
+        origin = self.headers.get('Origin')
+        if not origin:
+            return True
+            
+        orig_netloc = urlparse(origin).netloc.split(':')[0].lower()
+        if not orig_netloc:
+            return True
+            
+        if orig_netloc == host_name or orig_netloc in allowed_hosts:
+            return True
+        if is_cloud and (orig_netloc == 'vercel.com' or any(orig_netloc.endswith(suffix) for suffix in ('.vercel.app', '.onrender.com', '.railway.app', '.fly.dev'))):
+            return True
+            
+        return False
     def do_GET(self): self._dispatch('GET')
     def do_POST(self): self._dispatch('POST')
     def do_PUT(self): self._dispatch('PUT')
