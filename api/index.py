@@ -3,6 +3,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 # Add project root directory to sys.path
 ROOT = Path(__file__).resolve().parent.parent
@@ -48,8 +49,20 @@ class WSGIHandler(Handler):
         if 'HTTP_ORIGIN' in environ:
             self.headers['Origin'] = environ['HTTP_ORIGIN']
             
-        self.path = environ.get('PATH_INFO', '/')
-        qs = environ.get('QUERY_STRING', '')
+        raw_path = (
+            environ.get('HTTP_X_MATCHED_PATH') or
+            environ.get('HTTP_X_VERCEL_MATCHED_PATH') or
+            environ.get('HTTP_X_NOW_ROUTE') or
+            environ.get('RAW_URI') or
+            environ.get('REQUEST_URI') or
+            environ.get('PATH_INFO', '/')
+        )
+        if raw_path.startswith('/api/index.py') and environ.get('HTTP_X_MATCHED_PATH'):
+            raw_path = environ.get('HTTP_X_MATCHED_PATH')
+            
+        parsed = urlparse(raw_path)
+        self.path = parsed.path or '/'
+        qs = environ.get('QUERY_STRING') or parsed.query
         if qs:
             self.path += '?' + qs
             

@@ -274,10 +274,29 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(200,content,'image/png')
             if path.startswith('/api/'): return self.send(404,{'error':'Endpoint not found.'})
             if method=='GET':
-                allowed={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/product.js':'product.js','/product.css':'product.css'}
-                if path in allowed:
-                    f=ROOT/'web'/allowed[path]
-                    return self.send(200,f.read_bytes(),mimetypes.guess_type(f.name)[0] or 'text/plain')
+                clean = path.split('?')[0]
+                if clean.startswith('/web/'): clean = clean[4:]
+                elif clean == '/web': clean = '/'
+                
+                if clean in ('/', '/index.html'):
+                    target = ROOT / 'web' / 'index.html'
+                else:
+                    target = (ROOT / 'web' / clean.lstrip('/')).resolve()
+                    
+                web_dir = (ROOT / 'web').resolve()
+                try:
+                    if target.is_file() and target.is_relative_to(web_dir):
+                        ctype = mimetypes.guess_type(target.name)[0] or 'application/octet-stream'
+                        if target.suffix == '.js': ctype = 'application/javascript'
+                        elif target.suffix == '.css': ctype = 'text/css'
+                        elif target.suffix == '.html': ctype = 'text/html'
+                        return self.send(200, target.read_bytes(), ctype)
+                except (ValueError, TypeError): pass
+                
+                if '.' not in clean.split('/')[-1]:
+                    index_file = ROOT / 'web' / 'index.html'
+                    if index_file.is_file():
+                        return self.send(200, index_file.read_bytes(), 'text/html')
             return self.send(404,{'error':'Not found.'})
         except (ValueError,json.JSONDecodeError) as exc: self.send(400,{'error':str(exc)[:600]})
         except Exception as exc:

@@ -6,20 +6,8 @@
   },
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/index.py"
-    },
-    {
-      "source": "/samples/(.*)",
-      "destination": "/api/index.py"
-    },
-    {
-      "source": "/share/(.*)",
-      "destination": "/api/index.py"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/web/$1"
+      "destination": "/api/index.py"
     }
   ]
 }
