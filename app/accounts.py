@@ -1,8 +1,16 @@
 """Local account/session and revocable sharing storage; no external identity service."""
-import hashlib,hmac,json,re,secrets,sqlite3,time
+import base64,hashlib,hmac,json,os,re,secrets,sqlite3,time
 from contextlib import contextmanager
 from pathlib import Path
 from http.cookies import SimpleCookie, CookieError
+
+SIGN_SECRET = (
+    os.getenv('TABLEFLOW_SECRET') or 
+    os.getenv('GEMINI_API_KEY') or 
+    os.getenv('VERCEL_DEPLOYMENT_ID') or 
+    'tableflow-stable-session-sign-2026'
+).encode('utf-8')
+REVOKED = set()
 
 class Accounts:
     def __init__(self,folder):
@@ -43,26 +51,50 @@ class Accounts:
         if not row or not hmac.compare_digest(actual,expected):raise ValueError('Email or password is incorrect.')
         return self.public(row)
     def new_session(self,uid):
-        token=secrets.token_urlsafe(32)
+        with self.db() as db:
+            row=db.execute('SELECT * FROM users WHERE id=?',(uid,)).fetchone()
+            user_data=dict(row) if row else {'id':uid,'name':'User','email':'user@tableflow.app','plan':'starter','created':time.time()}
+        expires=time.time()+604800
+        payload={'id':user_data['id'],'name':user_data['name'],'email':user_data['email'],'plan':user_data['plan'],'created':user_data['created'],'exp':expires,'n':secrets.token_hex(8)}
+        b64=base64.urlsafe_b64encode(json.dumps(payload).encode()).decode()
+        sig=hmac.new(SIGN_SECRET,b64.encode(),hashlib.sha256).hexdigest()
+        token=f"{b64}.{sig}"
         with self.db() as db:
             db.execute('DELETE FROM sessions WHERE expires<?',(time.time(),))
-            db.execute('INSERT INTO sessions VALUES(?,?,?)',(self.digest(token),uid,time.time()+604800))
+            db.execute('INSERT INTO sessions VALUES(?,?,?)',(self.digest(token),uid,expires))
         return token
     def user_for(self,cookie):
         try:c=SimpleCookie();c.load(cookie or '');token=c['tableflow_session'].value
         except (KeyError,ValueError,CookieError):return None
+        digest=self.digest(token)
+        if digest in REVOKED:return None
+        if '.' in token:
+            try:
+                b64,sig=token.split('.',1)
+                expected_sig=hmac.new(SIGN_SECRET,b64.encode(),hashlib.sha256).hexdigest()
+                if hmac.compare_digest(expected_sig,sig):
+                    payload=json.loads(base64.urlsafe_b64decode(b64.encode()).decode())
+                    if payload.get('exp',0)>time.time():
+                        try:
+                            with self.db() as db:
+                                db.execute('INSERT OR IGNORE INTO users(id,email,name,password,plan,created) VALUES(?,?,?,?,?,?)',
+                                           (payload['id'],payload.get('email','user@tableflow.app'),payload.get('name','User'),'signed-session',payload.get('plan','starter'),payload.get('created',time.time())))
+                        except Exception:pass
+                        return {'id':payload['id'],'name':payload.get('name','User'),'email':payload.get('email','user@tableflow.app'),'plan':payload.get('plan','starter'),'created':payload.get('created',time.time())}
+            except Exception:pass
         with self.db() as db:
-            row=db.execute('SELECT users.* FROM sessions JOIN users ON users.id=sessions.user_id WHERE digest=? AND expires>?',(self.digest(token),time.time())).fetchone()
+            row=db.execute('SELECT users.* FROM sessions JOIN users ON users.id=sessions.user_id WHERE digest=? AND expires>?',(digest,time.time())).fetchone()
         return self.public(row) if row else None
     def logout(self,cookie):
         try:c=SimpleCookie();c.load(cookie or '');token=c['tableflow_session'].value
         except (KeyError,ValueError,CookieError):return
-        with self.db() as db:db.execute('DELETE FROM sessions WHERE digest=?',(self.digest(token),))
+        digest=self.digest(token);REVOKED.add(digest)
+        with self.db() as db:db.execute('DELETE FROM sessions WHERE digest=?',(digest,))
     def set_plan(self,uid,plan):
         if plan not in ('starter','pro','team'):raise ValueError('Unknown plan.')
         with self.db() as db:
             db.execute('UPDATE users SET plan=? WHERE id=?',(plan,uid));row=db.execute('SELECT * FROM users WHERE id=?',(uid,)).fetchone()
-        return self.public(row)
+        return self.public(row) if row else {'id':uid,'name':'User','email':'user@tableflow.app','plan':plan,'created':time.time()}
     def create_share(self,uid,jid,hours):
         if hours not in (1,24,168):raise ValueError('Choose 1 hour, 24 hours or 7 days.')
         token=secrets.token_urlsafe(32);sid=secrets.token_hex(16);now=time.time()

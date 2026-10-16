@@ -14,6 +14,18 @@ os.environ['VERCEL'] = '1'
 
 from app.server import Handler
 
+class CaseInsensitiveDict(dict):
+    def __getitem__(self, key):
+        for k, v in self.items():
+            if k.lower() == str(key).lower(): return v
+        raise KeyError(key)
+    def get(self, key, default=None):
+        for k, v in self.items():
+            if k.lower() == str(key).lower(): return v
+        return default
+    def __contains__(self, key):
+        return any(k.lower() == str(key).lower() for k in self.keys())
+
 class WSGIHandler(Handler):
     def __init__(self, environ, start_response):
         self.environ = environ
@@ -21,7 +33,7 @@ class WSGIHandler(Handler):
         self.body_out = b''
         
         # Build headers dictionary from WSGI environment
-        self.headers = {}
+        self.headers = CaseInsensitiveDict()
         for k, v in environ.items():
             if k.startswith('HTTP_'):
                 h_name = k[5:].replace('_', '-').title()

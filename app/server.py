@@ -135,10 +135,14 @@ class Handler(BaseHTTPRequestHandler):
                 if path.endswith('register'):user=ACCOUNTS.register(body.get('name'),body.get('email'),body.get('password'))
                 else:user=ACCOUNTS.login(body.get('email'),body.get('password'))
                 token=ACCOUNTS.new_session(user['id'])
-                return self.send(200,{'user':user},'application/json',{'Set-Cookie':'tableflow_session='+token+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=604800'})
+                is_vercel = bool(os.getenv('VERCEL'))
+                sec_flag = '; Secure' if is_vercel else ''
+                return self.send(200,{'user':user},'application/json',{'Set-Cookie':'tableflow_session='+token+'; HttpOnly; SameSite=Strict; Path=/'+sec_flag+'; Max-Age=604800'})
             if path=='/api/auth/logout' and method=='POST':
                 ACCOUNTS.logout(self.headers.get('Cookie'))
-                return self.send(200,{'ok':True},headers={'Set-Cookie':'tableflow_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0'})
+                is_vercel = bool(os.getenv('VERCEL'))
+                sec_flag = '; Secure' if is_vercel else ''
+                return self.send(200,{'ok':True},headers={'Set-Cookie':'tableflow_session=; HttpOnly; SameSite=Strict; Path=/'+sec_flag+'; Max-Age=0'})
             if path=='/api/auth/me' and method=='GET':return self.send(200,{'user':user})
             shared=re.fullmatch(r'/share/([A-Za-z0-9_-]{40,60})',path)
             if shared and method=='GET':
@@ -147,8 +151,28 @@ class Handler(BaseHTTPRequestHandler):
                 snapshot=DATA/'shares'/(share['id']+'.xlsx')
                 if not snapshot.is_file():return self.send(410,'This Excel share is no longer available.','text/plain')
                 return self.send(200,snapshot.read_bytes(),'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',{'Content-Disposition':'attachment; filename="shared-tableflow.xlsx"','Referrer-Policy':'no-referrer'})
-            protected=path.startswith('/api/jobs') or path in ('/api/plan','/api/shares','/api/ai/settings') or path.startswith('/api/shares/')
+            protected=path.startswith('/api/jobs') or path in ('/api/plan','/api/shares','/api/ai/settings','/api/export','/api/export-pdf') or path.startswith('/api/shares/')
             if protected and not user:return self.send(401,{'error':'Sign in to your workspace first.'})
+            if path=='/api/export' and method=='POST':
+                data=self.json_body(8_000_000)
+                res=data.get('result')
+                if not res or 'tables' not in res: raise ValueError('Invalid export data.')
+                target=DATA/'temp_export.xlsx'
+                export_xlsx(res, target)
+                content=target.read_bytes()
+                target.unlink(missing_ok=True)
+                fname=Path(data.get('filename','tableflow-extracted')).stem + '-tableflow.xlsx'
+                return self.send(200,content,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',{'Content-Disposition':f'attachment; filename="{fname}"'})
+            if path=='/api/export-pdf' and method=='POST':
+                data=self.json_body(8_000_000)
+                res=data.get('result')
+                if not res or 'tables' not in res: raise ValueError('Invalid export data.')
+                target=DATA/'temp_export.pdf'
+                export_pdf(res, target)
+                content=target.read_bytes()
+                target.unlink(missing_ok=True)
+                fname=Path(data.get('filename','tableflow-extracted')).stem + '-tableflow.pdf'
+                return self.send(200,content,'application/pdf',{'Content-Disposition':f'attachment; filename="{fname}"'})
             if path=='/api/ai/settings' and method=='GET':return self.send(200,public_settings(user['id']))
             if path=='/api/ai/settings' and method=='PUT':return self.send(200,update_settings(user['id'],self.json_body(2000)))
             if path=='/api/plan' and method=='PUT':
@@ -169,7 +193,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(200,f.read_bytes(),mimetypes.guess_type(f.name)[0] or 'application/octet-stream')
             if method=='POST' and path=='/api/jobs':
                 jid=create_job(self.body(),q.get('name',['document.pdf'])[0],q.get('language',['eng'])[0],q.get('ocr',['0'])[0]=='1',user['id'],q.get('mode',['ai'])[0])
-                return self.send(202,{'id':jid})
+                with LOCK: job=JOBS.get(jid, {'id': jid})
+                return self.send(200 if job.get('status')=='complete' else 202, job)
             match=re.fullmatch(r'/api/jobs/([a-f0-9]{32})(?:/(.*))?',path)
             if match:
                 jid,action=match.groups()
