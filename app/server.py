@@ -12,7 +12,8 @@ from .accounts import Accounts
 from .engine import MAX_BYTES, extract, validate, export_xlsx, export_pdf, suggest_headers, FITZ_LOCK
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=Path(os.getenv('TABLEFLOW_DATA',str(ROOT/'data'))).resolve()
+default_data = '/tmp/tableflow_data' if os.getenv('VERCEL') else str(ROOT/'data')
+DATA=Path(os.getenv('TABLEFLOW_DATA',default_data)).resolve()
 DATA.mkdir(parents=True,exist_ok=True)
 ACCOUNTS=Accounts(DATA)
 ATTEMPTS={}
@@ -67,7 +68,11 @@ def create_job(content,name,language='eng',force=False,owner=None,mode='ai'):
         folder=DATA/jid;folder.mkdir()
         (folder/'source').write_bytes(content)
         job=dict(id=jid,owner=owner,mode=mode,export_count=0,filename=Path(name.replace('\\','/')).name[:160] or 'document',status='queued',progress=0,message='Waiting for extraction',created=time.time(),language=language,force_ocr=force,error=None)
-        save(job);POOL.submit(run_job,jid,settings)
+        save(job)
+        if os.getenv('VERCEL') or os.getenv('TABLEFLOW_SYNC'):
+            run_job(jid,settings)
+        else:
+            POOL.submit(run_job,jid,settings)
         return jid
 
 
@@ -96,7 +101,14 @@ class Handler(BaseHTTPRequestHandler):
         return data
     def safe_origin(self):
         host=self.headers.get('Host','')
-        if host.split(':')[0] not in ('localhost','127.0.0.1','[::1]'): return False
+        allowed_hosts=('localhost','127.0.0.1','[::1]')
+        is_allowed=(
+            host.split(':')[0] in allowed_hosts or
+            host.endswith('.vercel.app') or
+            bool(os.getenv('VERCEL')) or
+            bool(os.getenv('TABLEFLOW_ALLOW_ANY_HOST'))
+        )
+        if not is_allowed: return False
         origin=self.headers.get('Origin')
         return not origin or origin in ('http://'+host,'https://'+host)
     def do_GET(self): self.handle_request('GET')
