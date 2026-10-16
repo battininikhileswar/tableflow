@@ -1,0 +1,7 @@
+PASS: both JavaScript files parse
+PASS: Python sources compile
+PASS: all static DOM references exist and IDs are unique
+PASS: referenced scripts/styles exist
+PASS: no decorative image, SVG, picture, canvas or video elements
+PASS: 40 automated tests, with AI contract/orchestration responses mocked
+LIMIT: no live Gemini key, AI accuracy benchmark or browser visual QA

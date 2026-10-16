@@ -1,0 +1,47 @@
+test_credentials_fail_fast (test_ai_agent.AIContractTests.test_credentials_fail_fast) ... ok
+test_incompatible_continuation_kept_separate (test_ai_agent.AIContractTests.test_incompatible_continuation_kept_separate) ... ok
+test_misalignment_and_numeric_json_rejected (test_ai_agent.AIContractTests.test_misalignment_and_numeric_json_rejected) ... ok
+test_no_successful_page_is_failure (test_ai_agent.AIContractTests.test_no_successful_page_is_failure) ... ok
+test_printed_arithmetic_error_preserved_and_flagged (test_ai_agent.AIContractTests.test_printed_arithmetic_error_preserved_and_flagged) ... ok
+test_rate_limit_retries (test_ai_agent.AIContractTests.test_rate_limit_retries) ... ok
+test_real_request_contract_and_no_key_in_url (test_ai_agent.AIContractTests.test_real_request_contract_and_no_key_in_url) ... ok
+test_truncated_result_retried_then_rejected (test_ai_agent.AIContractTests.test_truncated_result_retried_then_rejected) ... ok
+test_two_pass_merge_audit_uncertainty_and_excel (test_ai_agent.AIContractTests.test_two_pass_merge_audit_uncertainty_and_excel) ... ok
+test_verification_failure_does_not_accept_draft (test_ai_agent.AIContractTests.test_verification_failure_does_not_accept_draft) ... ok
+test_ai_job_automatically_writes_workbook_and_keeps_key_out_of_state (test_ai_agent.AIServerOrchestrationTests.test_ai_job_automatically_writes_workbook_and_keeps_key_out_of_state) ... ok
+test_accounts_require_session_and_isolate_documents (test_project.APITests.test_accounts_require_session_and_isolate_documents) ... ok
+test_ai_settings_are_private_and_missing_key_is_actionable (test_project.APITests.test_ai_settings_are_private_and_missing_key_is_actionable) ... ok
+test_corrupt_pdf_becomes_failed_job (test_project.APITests.test_corrupt_pdf_becomes_failed_job) ... ok
+test_deleting_document_revokes_its_shares (test_project.APITests.test_deleting_document_revokes_its_shares) ... ok
+test_expiring_share_and_original_download (test_project.APITests.test_expiring_share_and_original_download) ... ok
+test_full_upload_edit_export_retry_delete (test_project.APITests.test_full_upload_edit_export_retry_delete) ... ok
+test_invalid_edit_is_rejected (test_project.APITests.test_invalid_edit_is_rejected) ... ok
+test_invalid_upload (test_project.APITests.test_invalid_upload) ... ok
+test_json_object_validation (test_project.APITests.test_json_object_validation) ... ok
+test_no_visual_image_elements_in_ui (test_project.APITests.test_no_visual_image_elements_in_ui) ... ok
+test_origin_and_host_guards (test_project.APITests.test_origin_and_host_guards) ... ok
+test_persistence_across_restart (test_project.APITests.test_persistence_across_restart) ... ok
+test_plan_preference_and_invalid_plan (test_project.APITests.test_plan_preference_and_invalid_plan) ... ok
+test_preview_while_another_job_extracts (test_project.APITests.test_preview_while_another_job_extracts) ... ok
+test_share_snapshot_survives_edits_and_can_be_revoked (test_project.APITests.test_share_snapshot_survives_edits_and_can_be_revoked) ... ok
+test_static_assets (test_project.APITests.test_static_assets) ... ok
+test_unknown_routes (test_project.APITests.test_unknown_routes) ... ok
+test_blank_page_preserved (test_project.EngineTests.test_blank_page_preserved) ... ok
+test_business_pdf_fixtures_and_totals (test_project.EngineTests.test_business_pdf_fixtures_and_totals) ... ok
+test_export_preserves_ids_and_blocks_formulas (test_project.EngineTests.test_export_preserves_ids_and_blocks_formulas) ... ok
+test_fifty_pages (test_project.EngineTests.test_fifty_pages) ... ok
+test_image_ocr (test_project.EngineTests.test_image_ocr) ... skipped 'Tesseract OCR binary not installed'
+test_locked_pdf (test_project.EngineTests.test_locked_pdf) ... ok
+test_native_exact_cells_and_provenance (test_project.EngineTests.test_native_exact_cells_and_provenance) ... ok
+test_numeric_column_misalignment (test_project.EngineTests.test_numeric_column_misalignment) ... ok
+test_reject_fifty_one (test_project.EngineTests.test_reject_fifty_one) ... ok
+test_rule_flags (test_project.EngineTests.test_rule_flags) ... ok
+test_scanned_wide_tables (test_project.EngineTests.test_scanned_wide_tables) ... skipped 'Tesseract OCR binary not installed'
+test_wrong_totals_and_arithmetic (test_project.EngineTests.test_wrong_totals_and_arithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 9.915s
+
+OK (skipped=2)
+
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.

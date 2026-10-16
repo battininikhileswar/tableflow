@@ -1,0 +1,10 @@
+services:
+  tableflow:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - tableflow-data:/app/data
+    restart: unless-stopped
+volumes:
+  tableflow-data:
