@@ -10,8 +10,8 @@ import fitz
 from PIL import Image,ImageOps
 from .engine import FITZ_LOCK,MAX_PAGES,clean,validate
 
-DEFAULT_MODEL='gemini-flash-lite-latest'
-FALLBACK_MODELS=['gemini-flash-latest','gemini-3-flash-preview']
+DEFAULT_MODEL='gemini-3-flash-preview'
+FALLBACK_MODELS=['gemini-flash-lite-latest','gemini-flash-latest']
 STRING={'type':'string'}
 SCHEMA={'type':'object','properties':{
     'tables':{'type':'array','items':{'type':'object','properties':{
