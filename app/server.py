@@ -91,7 +91,9 @@ class Handler(BaseHTTPRequestHandler):
         try: size=int(self.headers.get('Content-Length','0'))
         except ValueError: raise ValueError('Invalid content length.')
         if size<1 or size>limit: raise ValueError(f'Body must be between 1 and {limit} bytes.')
-        self.connection.settimeout(45)
+        if getattr(self,'connection',None):
+            try: self.connection.settimeout(45)
+            except Exception: pass
         data=self.rfile.read(size)
         if len(data)!=size: raise ValueError('Upload interrupted. Retry the document.')
         return data
@@ -111,11 +113,11 @@ class Handler(BaseHTTPRequestHandler):
         if not is_allowed: return False
         origin=self.headers.get('Origin')
         return not origin or origin in ('http://'+host,'https://'+host)
-    def do_GET(self): self.handle_request('GET')
-    def do_POST(self): self.handle_request('POST')
-    def do_PUT(self): self.handle_request('PUT')
-    def do_DELETE(self): self.handle_request('DELETE')
-    def handle_request(self,method):
+    def do_GET(self): self._dispatch('GET')
+    def do_POST(self): self._dispatch('POST')
+    def do_PUT(self): self._dispatch('PUT')
+    def do_DELETE(self): self._dispatch('DELETE')
+    def _dispatch(self,method):
         try:
             if not self.safe_origin(): return self.send(403,{'error':'Only same-origin local requests are accepted.'})
             parsed=urlparse(self.path);path=parsed.path;q=parse_qs(parsed.query)
